@@ -1,0 +1,8 @@
+.user-background {
+    height: 30px;
+    width: 30px;
+    background-color: lightyellow;
+    border-radius: 50%;
+    display: inline;
+    right: 10px;
+}

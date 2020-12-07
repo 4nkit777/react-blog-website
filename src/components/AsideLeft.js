@@ -5,7 +5,7 @@ export default function AsideLeft() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    get("/aside-feed").then((asideFeedResponse) =>
+    get("/left-feed").then((asideFeedResponse) =>
       setData(asideFeedResponse.data)
     );
   }, []);
@@ -19,18 +19,18 @@ export default function AsideLeft() {
           className="card shadow"
           style={{ width: "16rem", margin: "0px", backgroundColor: "#fff1e6" }}
         >
-          {data.map(({ id, title, source, imgSrc }) => (
+          {data.map(({ id, image, title, source, minuteRead }) => (
             <div className="card-body" key={id}>
               {/* {imgSrc.map((x) => (
                                 <img src={x} style={{ width: '14rem', height: '8rem'}} />
                             ))} */}
               <img
-                src={imgSrc}
+                src={image}
                 style={{ width: "13.5rem", height: "8rem" }}
                 className="card-img-top"
               />
               <h5>{title}</h5>
-              <p style={{ color: "grey" }}>{source}</p>
+              <p style={{ color: "grey" }}>{source} + {minuteRead}</p>
             </div>
           ))}
         </div>

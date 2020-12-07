@@ -11,7 +11,7 @@ export default function AsideRight() {
   }, []);
 
   return (
-    <aside style={{ width: "17rem", marginLeft: "20px" }}>
+    <aside style={{ width: "17rem", marginLeft: "20px" }} className="ml-2 p-0" >
       {!data ? (
         <p>Loading...</p>
       ) : (

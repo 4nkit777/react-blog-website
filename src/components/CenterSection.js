@@ -47,10 +47,10 @@ export default function CenterSection() {
     // </div>
     <div>
         {!data ? (<p>Loading...</p>) : (
-        <div>
+        <div className="container">
             <ul className="m-0 p-0">
                 {data.map(({ id, image, title, source, minuteRead,subText }) => (
-                    <li className="card mb-2 d-flex" key={id} >
+                    <li className="card shadow mb-2 d-flex" key={id} >
                         <img src={image} style={{ width: "35.5rem", height: "22rem", borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }} alt="" className="align-self-center" />
                         <div className="card-body">
                             <h3>{title}</h3>

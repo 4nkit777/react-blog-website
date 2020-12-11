@@ -17,7 +17,7 @@ export default function AsideRight() {
       ) : (
         <div
           className="card shadow"
-          style={{ width: "16rem", margin: "0px", backgroundColor: "#fff1e6" }}
+          style={{ width: "16rem", margin: "0px"}}
         >
           {data.map(({ id, title, message, imgSrc }) => (
             <div className="card-body" key={id}>
@@ -29,8 +29,8 @@ export default function AsideRight() {
                 style={{ width: "13.5rem", height: "8rem" }}
                 className="card-img-top"
               />
-              <h3>{title}</h3>
-              <p>{message}</p>
+              <h5 className="mt-2">{title}</h5>
+              <p style={{ color: "grey" }}>{message} <span><i class="fas fa-dot-circle"></i></span></p>
             </div>
           ))}
         </div>

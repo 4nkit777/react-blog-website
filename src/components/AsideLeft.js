@@ -16,21 +16,18 @@ export default function AsideLeft() {
         <p>Loading...</p>
       ) : (
         <div
-          className="card shadow"
-          style={{ width: "16rem", margin: "0px", backgroundColor: "#fff1e6" }}
+          className=" shadow"
+          style={{ width: "16rem", margin: "0px",  }}
         >
           {data.map(({ id, image, title, source, minuteRead }) => (
             <div className="card-body" key={id}>
-              {/* {imgSrc.map((x) => (
-                                <img src={x} style={{ width: '14rem', height: '8rem'}} />
-                            ))} */}
               <img
                 src={image}
                 style={{ width: "13.5rem", height: "8rem" }}
-                className="card-img-top"
+                className="card-img-top border rounded"
               />
-              <h5>{title}</h5>
-              <p style={{ color: "grey" }}>{source} + {minuteRead}</p>
+              <h5 className="mt-2">{title}</h5>
+              <p style={{ color: "grey" }}>{source} <span><i class="fas fa-dot-circle"></i></span> {minuteRead}</p>
             </div>
           ))}
         </div>

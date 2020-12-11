@@ -10,8 +10,8 @@ export default function Discover() {
     }, []);
 
     return (
-        <div className="container mt-5 border-top border-bottom p-4 mb-2">
-            <h3 className="text-center mb-4 ">Discover more topics</h3>
+        <div className="container mt-5 border-top border-bottom p-5 mb-4">
+            <h3 className="text-center mb-4 "style={{ fontWeight: "600" }} >Discover More Topics</h3>
             {!data ? (<p>Loading...</p>) : (
                 <ul className="list-group d-flex flex-sm-row justify-content-between">
                     {data.map((x) => (
